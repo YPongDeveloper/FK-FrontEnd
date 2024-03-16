@@ -1,0 +1,37 @@
+.nameButton:hover {
+    color: red;
+  }
+  .newStudentButton {
+    left: 1203px;
+    top: 95px;
+    background-color: transparent;
+  border: none;
+  color: rgb(101, 60, 221);
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s;
+  width: 121px;
+  height: 43px;
+  position: absolute;
+  background: #FFF6E0;
+  border-radius: 21px;
+  }
+  .popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  .popup-content {
+    max-height: 400px; /* ปรับขนาดตามที่ต้องการ */
+    overflow-y: auto; /* เพิ่มการเลื่อนเมื่อมีเนื้อหาเกินขนาด */
+  }
+  .Butt{
+    padding: 30px;
+  }
+  

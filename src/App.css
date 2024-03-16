@@ -2,17 +2,103 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nameButton1:hover,
+.nameButton2:hover,
+.nameButton3:hover,
+.nameButton4:hover,
+.nameButton5:hover {
+  color: red;
+}
+.nameButton1 {
+  position: absolute;
+  left: 1100px;
+  top: 70px;
+  width: 240px;
+  height: 68px;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 12px;
+  font-size: 36px;
+  color: #61677A;
+  font-family: 'Kanit';
+  font-weight: 400;
+  cursor: pointer;
+  transition: color 0.3s;
+  margin-bottom: 10px;
+}
+.nameButton2 {
+  position: absolute;
+  left: 1100px;
+  top: 170px;
+  width: 240px;
+  height: 68px;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 12px;
+  font-size: 36px;
+  color: #61677A;
+  font-family: 'Kanit';
+  font-weight: 400;
+  cursor: pointer;
+  transition: color 0.3s;
+  margin-bottom: 10px;
+}
+.nameButton3 {
+  position: absolute;
+  left: 1100px;
+  top: 270px;
+  width: 240px;
+  height: 68px;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 12px;
+  font-size: 36px;
+  color: #61677A;
+  font-family: 'Kanit';
+  font-weight: 400;
+  cursor: pointer;
+  transition: color 0.3s;
+  margin-bottom: 10px;
+}
+.nameButton4{
+  position: absolute;
+  left: 1100px;
+  top: 370px;
+  width: 240px;
+  height: 68px;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 12px;
+  font-size: 36px;
+  color: #61677A;
+  font-family: 'Kanit';
+  font-weight: 400;
+  cursor: pointer;
+  transition: color 0.3s;
+  margin-bottom: 10px;
+}
+.nameButton5{
+  position: absolute;
+  left: 1100px;
+  top: 470px;
+  width: 240px;
+  height: 68px;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 12px;
+  font-size: 36px;
+  color: #61677A;
+  font-family: 'Kanit';
+  font-weight: 400;
+  cursor: pointer;
+  transition: color 0.3s;
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
+body{
+  background-color: black;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -24,15 +110,144 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  background-color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.csvButton,
+.newStudentButton,
+.exportCsvButton,
+.nameButton {
+  background-color: transparent;
+  border: none;
+  color: rgb(101, 60, 221);
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.csvButton:hover,
+.newStudentButton:hover,
+.exportCsvButton:hover,
+.nameButton:hover {
+  color: red;
+}
+
+.csvButton,
+.newStudentButton,
+.exportCsvButton {
+  width: 121px;
+  height: 43px;
+  position: absolute;
+  background: #FFF6E0;
+  border-radius: 21px;
+}
+
+.csvButton {
+  left: 905px;
+  top: 95px;
+}
+
+.newStudentButton {
+  left: 1203px;
+  top: 95px;
+}
+
+.exportCsvButton {
+  left: 1054px;
+  top: 95px;
+}
+
+.nameButtons {
+  position: absolute;
+  left: 61px;
+  top: 274px;
+}
+
+.nameButton {
+  width: 240px;
+  height: 68px;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 12px;
+  font-size: 36px;
+  color: #61677A;
+  font-family: 'Kanit';
+  font-weight: 400;
+  cursor: pointer;
+  transition: color 0.3s;
+  margin-bottom: 10px;
+}
+
+.images {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100px;
+}
+
+/* .grayBackground {
+  width: 985px;
+  height: 717px;
+  position: absolute;
+  left: 372px;
+  top: 229px;
+  background: #D8D9DA;
+} */
+
+.textBox {
+  width: 240px;
+  height: 68px;
+  position: absolute;
+  left: 61px;
+  top: 599px;
+  background: #FFF6E0;
+  border-radius: 12px;
+}
+
+.studentNames {
+  position: absolute;
+  left: 61px;
+  top: 764px;
+}
+
+.nameText {
+  font-size: 36px;
+  color: #61677A;
+  font-family: 'Kanit';
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.studentCount {
+  position:relative;
+  left: 102px;
+  top: 153px;
+  color: white;
+  font-size: 36px;
+  font-family: 'Inter';
+  font-weight: 400;
+}
+
+.nameButton:hover {
+  color: red;
+}
+.newStudentButton {
+  left: 1203px;
+  top: 95px;
+  background-color: transparent;
+border: none;
+color: rgb(101, 60, 221);
+font-size: 20px;
+cursor: pointer;
+transition: color 0.3s;
+width: 121px;
+height: 43px;
+position: absolute;
+background: #FFF6E0;
+border-radius: 21px;
 }

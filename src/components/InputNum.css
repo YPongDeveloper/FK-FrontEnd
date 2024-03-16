@@ -1,0 +1,19 @@
+.popup{
+    z-index: 9999;
+    
+}
+.InputN{
+    width: 400px;
+    height: 50px;
+    
+}
+.buttonCon{
+    width: 100px;
+    height: 40px;
+    background-color: green;
+}
+.buttonCen{
+    width: 100px;
+    height: 40px;
+    background-color: rgb(189, 51, 5);
+}
