@@ -94,7 +94,11 @@
   transition: color 0.3s;
   margin-bottom: 10px;
 }
-
+.importcsv{
+  top: 20px;
+  left: 900px;
+  z-index: 999;
+}
 
 body{
   background-color: black;
@@ -120,7 +124,8 @@ body{
 .csvButton,
 .newStudentButton,
 .exportCsvButton,
-.nameButton {
+.nameButton,
+.numberButton {
   background-color: transparent;
   border: none;
   color: rgb(101, 60, 221);
@@ -132,25 +137,35 @@ body{
 .csvButton:hover,
 .newStudentButton:hover,
 .exportCsvButton:hover,
-.nameButton:hover {
+.nameButton:hover,
+.numberButton:hover {
   color: red;
 }
 
 .csvButton,
 .newStudentButton,
-.exportCsvButton {
+.exportCsvButton,
+.numberButton {
   width: 121px;
   height: 43px;
   position: absolute;
   background: #FFF6E0;
   border-radius: 21px;
 }
+.CSV{
+  width: 65px;
+  height: 20px;
 
+  background-color: white;
+}
 .csvButton {
   left: 905px;
   top: 95px;
 }
-
+.numberButton {
+  left: 700px;
+  top: 95px;
+}
 .newStudentButton {
   left: 1203px;
   top: 95px;

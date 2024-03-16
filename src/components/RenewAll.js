@@ -24,18 +24,16 @@ function RenewAll() {
             body: JSON.stringify({ school: student.school }),
           });
         }));
-        window.confirm("คุณต้องการลไม่?")
+       
         console.log('All students updated successfully');
       } catch (error) {
         console.error('Error updating all students:', error);
       }
     };
 
-    // เรียกใช้งานฟังก์ชัน updateAllStudents เมื่อ RenewAll component ถูก mount
-    updateAllStudents();
-  }, []); // ใช้ dependency array เป็น [] เพื่อให้ฟังก์ชันเรียกสำหรับการแสดงผลครั้งเดียวเมื่อ component ถูก mount
 
-  // ไม่ต้องส่งอะไรกลับหรือคืนค่า
+    updateAllStudents();
+  }, []); 
   return null;
 }
 

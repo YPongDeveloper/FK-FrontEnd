@@ -1,37 +1,44 @@
-.nameButton:hover {
-    color: red;
-  }
-  .newStudentButton {
-    left: 1203px;
-    top: 95px;
-    background-color: transparent;
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.popup-content h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.popup-content input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.popup-buttons button {
+  margin-right: 10px;
+  padding: 8px 20px;
   border: none;
-  color: rgb(101, 60, 221);
-  font-size: 20px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: color 0.3s;
-  width: 121px;
-  height: 43px;
-  position: absolute;
-  background: #FFF6E0;
-  border-radius: 21px;
-  }
-  .popup {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.5);
-  }
-  .popup-content {
-    max-height: 400px; /* ปรับขนาดตามที่ต้องการ */
-    overflow-y: auto; /* เพิ่มการเลื่อนเมื่อมีเนื้อหาเกินขนาด */
-  }
-  .Butt{
-    padding: 30px;
-  }
-  
+}
+
+.popup-buttons button:last-child {
+  margin-right: 0;
+}

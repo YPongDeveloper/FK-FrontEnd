@@ -1,19 +1,20 @@
-import AllNum from './AllNum';
-import NumSchool from './NumSchool';
+import numStudents from './AllNum';
+import './AddStudentPopup.css'
 import React, { useState, useEffect } from 'react';
 
-function CreateStudents({  onConfirm, onCancel}) {
+function AddStudentPopup({  onConfirm, onCancel , total}) {
     const [showPopup, setShowPopup] = useState(false);
   const [fristName, setFristName] = useState('');
   const [lastName, setLastName] = useState('');
   const [school, setSchool] = useState('');
   const [maxId, setMaxId] = useState(0);
   const [errorMessage, setErrorMessage] = useState('');
-  
+  const [numStudents, setNumStudents] = useState();
   
   useEffect(() => {
     
-  
+      
+    
     handleAddStudent();
     // เรียก API เพื่อดึงข้อมูลนักเรียนทั้งหมด
     fetch('http://3.24.218.91:5000/students')
@@ -35,13 +36,33 @@ function CreateStudents({  onConfirm, onCancel}) {
   const handleAddStudent = () => {
     setShowPopup(true);
   };
-
+  const fetchNumStudents = async () => {
+    try {
+      const response = await fetch(`http://3.24.218.91:5000/read`);
+      const data = await response.json();
+      setNumStudents(data.length);
+    } catch (error) {
+      console.error('Error fetching number of students:', error);
+    }
+  };
   const handleSubmit = () => {
+    fetchNumStudents();
+    if (numStudents === 0) {
+        setSchool(1);
+      } else if (numStudents % 4 === 0) {
+        setSchool(1);
+      } else if (numStudents % 4 === 1) {
+        setSchool(2);
+      } else if (numStudents% 4 === 2) {
+        setSchool(3);
+      } else if (numStudents % 4 === 3) {
+        setSchool(4);
+      }
     if (!fristName || !lastName || !school) {
-      setErrorMessage('Please fill out all fields.');
+      setErrorMessage('กดอีกครั้ง เเละรีเฟรสหน้าต่าง เพื่อดูข้อมูลเข้า');
       return;
     }
-    
+
     const newStudentData = {
       "id": maxId + 1,
       "fristName": fristName,
@@ -54,14 +75,15 @@ function CreateStudents({  onConfirm, onCancel}) {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(newStudentData),
+      body: JSON.stringify({ id: maxId+1 , fristName:fristName,lastName:lastName,school:school }),
     })
     .then(response => {
       if (response.ok) {
-        console.log('New student added successfully.');
         
+        console.log('New student added successfully.');
+        window.location.reload();
       } else {
-        window.confirm('School : 1: ประชาชื่น   2: อินทร  3: กนกอาชีวะ  4: บูรณพล');
+        window.confirm(numStudents);
         console.error('Failed to add new student.');
       }
     })
@@ -108,4 +130,4 @@ function CreateStudents({  onConfirm, onCancel}) {
   );
 }
 
-export default CreateStudents;
+export default AddStudentPopup;

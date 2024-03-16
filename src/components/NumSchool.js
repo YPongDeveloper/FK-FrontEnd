@@ -15,9 +15,9 @@ function NumSchool({ school }) {
     };
 
     fetchNumStudents();
-  }, [school]); // เรียกใช้งานเมื่อ school เปลี่ยนแปลง
+  }, [school]); 
 
-  return numStudents; // ส่งคืนจำนวนนักเรียนในรูปแบบตัวเลขเท่านั้น
+  return numStudents; 
 }
 
 export default NumSchool;
